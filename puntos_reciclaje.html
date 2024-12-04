@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPuntos - Puntos de Reciclaje</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 0;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            background-color: #575757;
+        }
+        
+        main {
+            padding: 1rem;
+        }
+        
+        #map {
+            height: 500px;
+            width: 100%;
+            margin-top: 1rem;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        ECOPUNTOS - Puntos de Reciclaje
+    </header>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="puntos_reciclaje.html">PUNTOS DE RECICLAJE</a>
+        <a href="premios.html">PREMIOS</a>
+        <a href="actualizar_datos.html">ACTUALIZAR DATOS</a>
+        <a href="login.html">LOGIN</a>
+    </nav>
+    <main>
+        <h2>Puntos de Reciclaje Cercanos</h2>
+        <p>Consulta el mapa para localizar los puntos de reciclaje más cercanos.</p>
+        <div id="map"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 EcoPuntos | Promoviendo el reciclaje en la Quinta Región</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Crear el mapa y centrarlo en Viña del Mar, Chile
+        const map = L.map('map').setView([-33.0153, -71.5500], 12);
+
+        // Agregar capa de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Añadir marcadores de ejemplo
+        const puntosReciclaje = [{
+            lat: -33.0193,
+            lng: -71.5520,
+            title: "EDIFICIO MONACO"
+        }, {
+            lat: -33.0250,
+            lng: -71.5400,
+            title: "SPORTING"
+        }];
+
+        puntosReciclaje.forEach(punto => {
+            L.marker([punto.lat, punto.lng])
+                .addTo(map)
+                .bindPopup(`<strong>${punto.title}</strong>`)
+                .openPopup();
+        });
+    </script>
+</body>
+
+</html>

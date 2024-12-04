@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPuntos - Perfil</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 0.5rem 0;
+            color: white;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            background-color: #575757;
+        }
+        
+        main {
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-card {
+            border: 2px solid #333;
+            padding: 1.5rem;
+            width: 500px;
+            text-align: left;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #4CAF50;
+        }
+        
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .profile-info p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        ECOPUNTOS
+    </header>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="puntos_reciclaje.html">PUNTOS DE RECICLAJE</a>
+        <a href="#">PREMIOS</a>
+        <a href="#">ACTUALIZAR DATOS</a>
+        <a href="login.html">CERRAR SESION</a>
+    </nav>
+    <main>
+        <!-- Tarjeta de perfil -->
+        <div class="profile-card">
+            <div class="profile-info">
+                <p><strong>NOMBRE:</strong> Usuario Ejemplo</p>
+                <p><strong>CANTIDAD DE PUNTOS:</strong> 1000</p>
+                <p><strong>IMPACTO DE AYUDA:</strong> Contribución positiva al medio ambiente</p>
+            </div>
+            <img src="https://via.placeholder.com/150" alt="Foto de perfil">
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 EcoPuntos | Promoviendo el reciclaje en la Quinta Región</p>
+    </footer>
+</body>
+
+</html>
