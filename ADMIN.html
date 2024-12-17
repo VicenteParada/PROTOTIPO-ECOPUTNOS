@@ -1,0 +1,122 @@
+<!-- Prototipo de Vista Administrador -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Administrador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- Layout principal -->
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav class="bg-dark text-white p-3" style="width: 250px; height: 100vh;">
+            <h4>Administrador</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="#" class="nav-link text-white">Inicio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Proyectos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Usuarios</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Configuración</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-danger">Salir</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="container-fluid p-4">
+            <!-- Dashboard Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Dashboard</h2>
+                <button class="btn btn-primary">Nuevo Registro</button>
+            </div>
+
+            <!-- Métricas clave -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card text-white bg-info mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Usuarios Totales</h5>
+                            <p class="card-text display-4">150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyectos Activos</h5>
+                            <p class="card-text display-4">12</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Requisitos Pendientes</h5>
+                            <p class="card-text display-4">8</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Alertas</h5>
+                            <p class="card-text display-4">3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de datos -->
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Listado de Usuarios
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Rol</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Juan Perez</td>
+                                <td>juanperez@mail.com</td>
+                                <td>Administrador</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning">Editar</button>
+                                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>María Gonzalez</td>
+                                <td>maria@mail.com</td>
+                                <td>Editor</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning">Editar</button>
+                                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
